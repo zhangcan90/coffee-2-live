@@ -10,5 +10,6 @@ public class Coffee
     public int Acidity { get; set; }
     public int Body { get; set; }
     public int Roast { get; set; }
+    public decimal Price { get; set; }
     public string BestFor { get; set; } = string.Empty;
 }

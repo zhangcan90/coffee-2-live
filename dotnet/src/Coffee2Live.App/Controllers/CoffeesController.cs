@@ -58,7 +58,8 @@ namespace Coffee2Live.App.Controllers
                     Body = i.Body,
                     BestFor = i.BestFor ?? string.Empty,
                     Acidity = TryParseEnum<Acidity>(i.Acidity, Acidity.Medium),
-                    Roast = TryParseEnum<Roast>(i.Roast, Roast.Medium)
+                    Roast = TryParseEnum<Roast>(i.Roast, Roast.Medium),
+                    Price = i.Price
                 };
                 list.Add(coffee);
             }
@@ -90,6 +91,7 @@ namespace Coffee2Live.App.Controllers
             public int Body { get; set; }
             public string? Roast { get; set; }
             public string? BestFor { get; set; }
+            public decimal Price { get; set; }
         }
     }
 }
